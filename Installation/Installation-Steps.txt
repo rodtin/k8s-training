@@ -1,0 +1,104 @@
+    1  sudo -i
+    2  shutdown -h now
+    3  vi /etc/hosts
+    4  sudo -i
+    5  sudo apt update
+    6  sudo -i
+    7  docker ps
+    8  sudo swapon --show
+    9  sudo swapoff -a
+   10  sudo swapon --show
+   11  vi /etc;fstab
+   12  vi /etc/fstab
+   13  sudo vi /etc/fstab
+   14  :qvi /etc/fstab /etc/fstab
+   15  :q':qvi /etc/fstab /etc/fstab'vi /etc/fstab /etc/fstab
+   16  sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+   17  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   18  cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+   19  sudo apt-get update
+   20  clear
+   21  apt-mark hold kubelet kubectl
+   22  sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+   23  cat /etc/apt/sources.list.d/kubernetes.list
+   24  sudo apt-get update
+   25  clear
+   26  sudo apt-mark huld kubelet kubectl
+   27  sudo apt-mark hold kubelet kubectl
+   28  sudo apt-mark showhold
+   29  apt-cache madison kubeadm
+   30  apt-get install -y kubeadm=1.19.5-00
+   31  sudo apt-get install -y kubeadm=1.19.5-00
+   32  apt-mark unhold kubectl kubelet
+   33  sudo apt-mark unhold kubectl kubelet
+   34  sudo apt-get install -y kubeadm=1.19.5-00
+   35  sudo apt-get install kubeadm=1.19.5-00
+   36  sudo apt-get install kubeadm=1.19.5-00 kubectl=1.19.5-00 kubelet=1.19.5-00
+   37  kubelet --version
+   38  kubectl --version
+   39  kubectl -v
+   40  kubectl ---help
+   41  kubectl --help
+   42  kubectl version
+   43  kubelet --version
+   44  kubectl version
+   45  kubeadm --verion
+   46  kubeadm --version
+   47  kubeadm version
+   48  kubelet --version
+   49  kubectl version
+   50  kubelet version
+   51  kubeadm version
+   52  clear
+   53  kubeadm version
+   54  kubelet --version
+   55  kubectl version
+   56  kubeadm init --help
+   57  kubeadm init --apiserver-advertise-address=192.168.56.201 --pod-network-cidr=10.244.0.0/16
+   58  sudo kubeadm init --apiserver-advertise-address=192.168.56.201 --pod-network-cidr=10.244.0.0/16
+   59  mkdir -p $HOME/.kube
+   60  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   61  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   62  kubectl show hosts
+   63  kubectl get nodes
+   64  docker images
+   65  kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
+   66  kubectl get all
+   67  kubectl get all -n tigela-operator
+   68  kubectl get all -n tigera-operator
+   69  ls -lrth
+   70  apt install git
+   71  sudo apt install git
+   72  mkdir k8s-training
+   73  cd k8s-training/
+   74  git init
+   75  mkdir Installation
+   76  mkdir Installation/Calico
+   77  git commit -m "First Commit"
+   78  git remote add origin https://github.com/rodtin/k8s-training.git
+   79  git config --global user.email "rodtin@gmail.com"
+   80  git commit -m "First Commit"
+   81  git add .
+   82  git commit -m "First Commit"
+   83  ls
+   84  cd Installation/Calico/
+   85  curl https://docs.projectcalico.org/manifests/custom-resources.yaml --output custom-resources.yaml
+   86  ls -lrth
+   87  vi custom-resources.yaml 
+   88  kubectl create 0f custom-resources.yaml 
+   89  kubectl create -f custom-resources.yaml 
+   90  kubectl -n kube-system get all
+   91  kubectl -n calico
+   92  kubectl get ns
+   93  kubectl get all -n calico-system
+   94  watch -d -n 1 kubectl get all -n calico-system
+   95  kubectl -n kube-system get all
+   96  kubectl get node
+   97  kubectl get node -o wide
+   98  watch -d -n 1 kubectl get node -o wide
+   99  cd ..
+  100  cd ~/k8s-training/Installation/
+  101  history > Installation-Steps.txt
